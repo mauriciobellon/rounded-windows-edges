@@ -119,4 +119,3 @@ This project is licensed under the GNU General Public License v3.0. See the [LIC
 For any questions or suggestions, feel free to open an issue or contact the maintainer:
 
 - GitHub: [mauriciobellon](https://github.com/mauriciobellon)
-- Email: mauricio@example.com
