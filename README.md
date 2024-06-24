@@ -118,6 +118,7 @@ Rounded Windows Edges is a Windows utility that enhances your user interface by 
 - [ ] Add Screenshot to Readme
 - [ ] FEATURE: Autorun after Installation
 - [ ] ISSUE: Config only applies changes on app restart
+- [ ] ISSUE: Scaled UI not been calculated correctly 
 
 ## License
 
