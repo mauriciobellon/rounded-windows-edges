@@ -2,6 +2,10 @@
 
 Rounded Windows Edges is a Windows utility that enhances your user interface by adding customizable rounded corners to all application windows across multiple monitors. This application is designed to provide a modern and aesthetically pleasing look to your desktop environment.
 
+
+![Screenshot](https://github.com/mauriciobellon/rounded-windows-edges/blob/master/rounded-windows-edges.png?raw=true)
+
+
 ## Table of Contents
 
 - [Features](#features)
