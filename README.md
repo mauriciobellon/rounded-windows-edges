@@ -105,6 +105,18 @@ Rounded Windows Edges is a Windows utility that enhances your user interface by 
 
 5. Open a pull request to the main repository.
 
+## To Do
+
+- [x] Add Icon Tray
+- [x] Add Settings on Icons Tray
+- [x] Add Autostart
+- [x] Add support for multiple monitors
+- [x] Add support for high DPI displays
+- [x] Create Installation Package
+- [ ] Add Screenshot to Readme
+- [ ] FEATURE: Autorun after Installation
+- [ ] ISSUE: Config only applies changes on app restart
+
 ## License
 
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
