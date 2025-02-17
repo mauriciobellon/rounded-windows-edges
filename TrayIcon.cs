@@ -40,6 +40,9 @@ namespace RoundedWindowsEdges
             contextMenu.Items.Add(mediumCornersItem);
             contextMenu.Items.Add(largeCornersItem);
             contextMenu.Items.Add(autoStartItem);
+
+                contextMenu.Items.Add(new ToolStripMenuItem("Update", null, (sender, e) => mainWindow.PerformUpdate()));
+
             contextMenu.Items.Add("Exit", null, OnExit);
 
             notifyIcon.ContextMenuStrip = contextMenu;

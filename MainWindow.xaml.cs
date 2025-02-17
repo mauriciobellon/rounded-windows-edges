@@ -60,11 +60,7 @@ namespace RoundedWindowsEdges
             this.Hide(); // Hide instead of cancelling close to ensure cleanup
         }
 
-        private void WndRoundedWindowsEdges_Loaded(object sender, RoutedEventArgs e)
-        {
-            Point location = this.PointToScreen(new Point(0, 0));
-            this.WindowStartupLocation = WindowStartupLocation.Manual;
-        }
+
 
         private void WndRoundedWindowsEdges_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -99,6 +95,21 @@ namespace RoundedWindowsEdges
             currentCornerSize = size;
         }
 
+
+        private async void CheckForUpdates()
+        {
+            // Define current version, ideally this comes from assembly info
+            string currentVersion = "1.0.0";
+            await Updater.CheckForUpdatesAsync(currentVersion);
+        }
+
+        private void WndRoundedWindowsEdges_Loaded(object sender, RoutedEventArgs e)
+        {
+            Point location = this.PointToScreen(new Point(0, 0));
+            this.WindowStartupLocation = WindowStartupLocation.Manual;
+            CheckForUpdates();
+        }
+
         private void LoadConfig()
         {
             Debug.WriteLine("LoadConfig method called");
@@ -110,5 +121,12 @@ namespace RoundedWindowsEdges
         {
             return currentCornerSize;
         }
+
+        public async void PerformUpdate()
+        {
+            string currentVersion = "1.0.0";
+            await Updater.CheckForUpdatesAsync(currentVersion);
+        }
+
     }
 }
