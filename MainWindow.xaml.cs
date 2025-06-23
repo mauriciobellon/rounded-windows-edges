@@ -40,7 +40,6 @@ namespace RoundedWindowsEdges
             this.Top = screenBounds.Top;
             this.Width = screenBounds.Width;
             this.Height = screenBounds.Height;
-
             Debug.WriteLine($"Window initialized: Left = {this.Left}, Top = {this.Top}, Width = {this.Width}, Height = {this.Height}");
         }
 
@@ -57,7 +56,7 @@ namespace RoundedWindowsEdges
         private void WndRoundedWindowsEdges_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;
-            this.Hide(); // Hide instead of cancelling close to ensure cleanup
+            this.Hide();
         }
 
         private void WndRoundedWindowsEdges_Loaded(object sender, RoutedEventArgs e)
@@ -85,17 +84,13 @@ namespace RoundedWindowsEdges
             imgCornerBR.Height = size;
             imgCornerBL.Width = size;
             imgCornerBL.Height = size;
-
             Debug.WriteLine($"Changing corner size to {size}");
             Debug.WriteLine($"imgCornerTL: {imgCornerTL.Visibility}, {imgCornerTL.Width}, {imgCornerTL.Height}");
             Debug.WriteLine($"imgCornerTR: {imgCornerTR.Visibility}, {imgCornerTR.Width}, {imgCornerTR.Height}");
             Debug.WriteLine($"imgCornerBR: {imgCornerBR.Visibility}, {imgCornerBR.Width}, {imgCornerBR.Height}");
             Debug.WriteLine($"imgCornerBL: {imgCornerBL.Visibility}, {imgCornerBL.Width}, {imgCornerBL.Height}");
-
-            // Save the new size to the config file
             config.CornerSize = size;
             config.SaveConfig();
-
             currentCornerSize = size;
         }
 

@@ -115,14 +115,14 @@ Rounded Windows Edges is a Windows utility that enhances your user interface by 
 - [x] Add Settings on Icons Tray
 - [x] Add Autostart
 - [x] Add support for multiple monitors
-- [x] Add support for high DPI displays
+- [x] Add support for most DPI scalings
 - [x] Persistent configuration
 - [x] Works with Fullscreen apps
 - [x] Create Installation Package
-- [ ] Add Screenshot to Readme
+- [x] Calculated Scaled UI
+- [x] Add Screenshot to Readme
 - [ ] FEATURE: Autorun after Installation
 - [ ] ISSUE: Config only applies changes on app restart
-- [ ] ISSUE: Scaled UI not been calculated correctly 
 
 ## License
 
