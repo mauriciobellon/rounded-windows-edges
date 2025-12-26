@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
@@ -21,7 +23,7 @@ namespace RoundedWindowsEdges
             this.mainWindow = mainWindow;
             notifyIcon = new NotifyIcon
             {
-                Icon = Properties.Resources.AppIcon,
+                Icon = LoadAppIcon(),
                 Visible = true,
                 Text = "Rounded Screen"
             };
@@ -99,6 +101,19 @@ namespace RoundedWindowsEdges
         private void OnExit(object sender, EventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+
+        private static Icon LoadAppIcon()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            using (var stream = assembly.GetManifestResourceStream("RoundedWindowsEdges.Resources.AppIcon.ico"))
+            {
+                if (stream != null)
+                {
+                    return new Icon(stream);
+                }
+            }
+            return SystemIcons.Application;
         }
 
         public void Dispose()
